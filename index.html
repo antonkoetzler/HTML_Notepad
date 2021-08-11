@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title> HTML Notepad </title>
+  <link rel="stylesheet" href="index.css">
+  <script src="js/index.js"></script>
+  <script src="js/FileSaver.js"></script>
+</head>
+
+<body>
+  <header id="menubar">
+    <div>
+      <button class="icon" onclick="toggleDropdown(event, 'fileDropdown')">File</button>
+
+      <ul class="dropdown" id="fileDropdown">
+        <li id="newFile">New File</li>
+        <li id="save">Save ~ Ctrl + S</li>
+        <li id="print">Print ~ Print + P</li>
+      </ul>
+    </div>
+
+    <div>
+      <button class="icon" onclick="toggleDropdown(event, 'viewDropdown')">View</button>
+
+      <ul class="dropdown" id="viewDropdown" style="width: 260px;">
+        <li id="zoomIn">Zoom In ~ Ctrl + Plus</li>
+        <li id="zoomOut">Zoom Out ~ Ctrl + Minus</li>
+      </ul>
+    </div>
+
+    <a href="https://github.com/antonkoetzler">
+      <img src="github.png" id="github">
+    </a>
+  </header>
+
+  <textarea autofocus id="textbox" onkeydown="tab(event)"></textarea>
+
+  <!-- Custom file name on save -->
+  <div id="fileNameContainer">
+    <input type="text" placeholder="Name of file (etc to escape)" id="fileName" onkeydown="characterCheck(event)">
+    <button id="saveButton" onclick="save(document.getElementById('fileName').value)">Save</button>
+  </div>
+</body>
+
+</html>

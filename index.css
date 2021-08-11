@@ -1,0 +1,116 @@
+body
+{
+  background: rgb(0, 0, 0);
+  margin: 0; padding: 0;
+  font-family: monospace;
+}
+
+#menubar
+{
+  display: flex; flex-flow: row wrap;
+  height: 40px; width: 100%;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  position: fixed;
+}
+
+.icon
+{
+  height: 40px; width: auto;
+  background: none; outline: none; border: none;
+  font-family: monospace; font-size: 18px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+.icon:hover
+{
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+.icon.active
+{
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+.dropdown
+{
+  display: none;
+  width: 215px;
+  list-style-type: none;
+  margin: 0; padding: 0;
+  background: rgb(255, 255, 255);
+  position: absolute;
+}
+.dropdown li
+{
+  padding: 5px;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+.dropdown li:hover
+{
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+#textbox
+{
+  height: calc(100vh - 50px); width: 100%;
+  background: none; outline: none; border: none;
+
+  font-family: monospace;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+
+  padding-left: 3px;
+
+  position: fixed;
+  bottom: 0; left: 0;
+  resize: none;
+
+  z-index: -9999;
+}
+
+#github
+{
+  height: 30px; width: 30px;
+  padding: 5px;
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  right: 0px;
+}
+#github:hover
+{
+  background: rgb(255, 255, 255);
+}
+
+#fileNameContainer
+{
+  display: none;
+  flex-flow: row wrap;
+  position: absolute;
+  left: 50%; transform: translateX(-50%);
+  top: 50px;
+}
+#saveButton
+{
+  background: none; outline: none;
+  border: 1px solid rgb(255, 255, 255);
+  font-family: monospace; font-size: 18px; color: white;
+  margin-left: 5px;
+  cursor: pointer;
+}
+#fileName
+{
+  height: 30px; width: 300px;
+
+  background: none; outline: none;
+  border: 1px solid rgb(255, 255, 255);
+
+  padding-left: 7px;
+
+  font-family: monospace;
+  font-size: 18px;
+  color: white;
+}
